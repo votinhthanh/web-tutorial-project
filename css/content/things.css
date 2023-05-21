@@ -1,0 +1,92 @@
+/* THINGS I DO */
+#things {
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 15em;
+}
+
+#things h2 {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 3em;
+}
+
+.things__dec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-60%);
+}
+
+.things__dec:nth-child(2) {
+    top: initial;
+    left: initial;
+    right: 0;
+    z-index: -1;
+    bottom: 15%;
+    transform: translateX(50%);
+}
+
+.things__item {
+    margin: 3em 0;
+
+}
+
+.things__item img {
+    padding-bottom: 4em;
+}
+
+.things__item-heading {
+    color: var(--gray);
+    text-align: center;
+}
+
+.things__item-heading p {
+    font-weight: 300;
+    line-height: 2em;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+@media (min-width: 62em)
+{
+    .things__dec:nth-child(2) {
+        bottom: 0;
+    }
+
+    .things__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    .things__item img {
+        width: 40%;
+        padding-bottom: 0;
+    }
+
+    .things__item-heading {
+        width: 45%;
+        text-align: initial;
+    }
+
+    .things__item-heading p {
+        max-width: 500px;
+        margin: 0;
+    }
+
+    .things__item:nth-child(odd) img {
+        order: 2;
+        width: 40%;
+        padding-bottom: 0;
+    }
+
+    .things__item-heading:nth-child(odd) {
+        order: 1;
+        width: 45%;
+        text-align: initial;
+    }
+}

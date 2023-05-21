@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.container {
+    padding: 0 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+button {
+    text-align: center;
+    color: #fff;
+    background-color: var(--gray);
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: var(--smooth);
+}
+
+button:hover {
+    background-color: var(--green-light);
+    transition: var(--smooth);
+}
+
+:root {
+    --green: #54B192;
+    --green-light: #A4CEC0;
+    --gray: #3F3D56;
+    --smooth: all .3s ease-in-out;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 4;
+    display: none;
+}
+
+#overlay.show {
+    display: initial;
+}
